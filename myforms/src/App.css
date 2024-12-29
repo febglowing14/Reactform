@@ -14,3 +14,11 @@ input {
   height: 3%;
   border-radius: 5%;
 }
+textarea{
+  padding-right: 30%;
+  margin: 10%;  
+  
+} 
+*{
+  background-color:skyblue
+}

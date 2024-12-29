@@ -2,19 +2,21 @@
 import react from 'react';
  export default function App() {
 
-  function handlesubmit(event) {
-    event.preventDefault();
-   const formEl =event.currentTarget;
-   const formData= new FormData(formEl);
-   const gmail = formData.get('email');
-   console.log(gmail);
-   formEl.reset();
+  function signup(formData) {
+    
+   const email= formData.get('email');
+   const password= formData.get('password');
+   const description= formData.get('description');
+   console.log(email)
+   console.log(password)
+   console.log(description)
+   
   }
   return(
     <section>
       <h3>Signup Form</h3>
  
-  <form onSubmit={handlesubmit}method='post'>   
+  <form action={signup}>
   
     <label>Email: </label>
     <input name='email' placeholder="abcd@gmail.com"/>
@@ -24,6 +26,8 @@ import react from 'react';
     <input name='password' placeholder='password'/>
     <br/>
     <br/>
+    <label>Description:</label>
+    <textarea name='description' placeholder='description'/>
 
     <button>submit</button>
       </form>
